@@ -1,0 +1,94 @@
+/** Problem -01 ( Divide the Asset ) */
+var area = 800;
+//write your code here
+
+if(0 < area && area <= 1e9 ){
+    var parPerson = area / 2
+    console.log(parPerson)
+}
+
+
+
+
+/** Problem -02 ( Cycle or Laptop ) */
+var money = 10000;
+//write your code here
+
+if(0 < money && money <= 1e9 ){
+
+  if(money >= 25000){
+        console.log("Laptop")
+    } else if(money >= 10000){
+        console.log("Cycle")
+    } else{
+        console.log("Chocolate")
+    }
+    
+}
+
+
+
+/** Problem -03 ( Medicine Planner ) */
+var lastDay = 11 ;
+//write your code here
+
+var days = 3
+
+if(0 < lastDay && lastDay <= 31 ){
+
+    for( var i = 1; i <= lastDay; i++ ){
+        if( i % days === 0 ){
+            console.log(i + " - medicine")
+            
+        }
+        if( i % days !== 0 ){
+            console.log(i + " - rest")   
+        }
+    }
+}
+
+
+
+
+/** Problem 04 - (Delete / Store) */
+var fileName= "pdfData.jpg";
+//write your code here
+
+var fileNameArray = fileName.split(".")
+fileNameArray = fileNameArray[fileNameArray.length - 1]   // when i don't know how many index of array then (fileNameArray.length - 1) it's called this array last index.
+//fileNameArray = fileNameArray[1] // When i know filNameArray has 2 index then directly set array index.
+
+if(fileName[0] === "#" || fileNameArray === "pdf" || fileNameArray === "docx" ){
+    console.log("Store")
+}
+else{
+    console.log("Delete")
+}
+
+
+
+
+/** Problem 05 - ( PH Email Generator )  */
+var student= { name: "jhanku" , roll: 1014 ,department: "cse" };
+//write your code here
+
+// var generatedEmail = student.name + student.roll + "." + student.department + "@ph.ac.bd"
+var generatedEmail =`${student.name}${student.roll}.${student.department}@ph.ac.bd`
+console.log(generatedEmail)
+
+
+
+/** Problem 06 :  (Current Salary )  */
+var experience = 30;
+var startingSalary = 45000;
+//write your code here
+
+
+if(0 < experience && startingSalary <= 1e6 ){ // Experience and Starting Salary validation
+
+    for( var i = 1; i <= experience; i++ ){
+        startingSalary = startingSalary + (startingSalary / 100 * 5)
+    }
+    console.log(startingSalary.toFixed(2))
+}
+

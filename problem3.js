@@ -4,16 +4,17 @@ var lastDay = 11 ;
 
 
 var days = 3
+
 if(0 < lastDay && lastDay <= 31 ){
 
     for( var i = 1; i <= lastDay; i++ ){
-        if(i === days){
+        if( i % days === 0 ){
             console.log(i + " - medicine")
             
         }
-        console.log(i + " - rest")
+        if( i % days !== 0 ){
+            console.log(i + " - rest")   
+        }
     }
-
-
 }
 
