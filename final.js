@@ -27,19 +27,16 @@ if(0 < money && money <= 1e9 ){
 }
 
 
-
 /** Problem -03 ( Medicine Planner ) */
 var lastDay = 11 ;
 //write your code here
 
 var days = 3
-
 if(0 < lastDay && lastDay <= 31 ){
 
     for( var i = 1; i <= lastDay; i++ ){
         if( i % days === 0 ){
-            console.log(i + " - medicine")
-            
+            console.log(i + " - medicine")   
         }
         if( i % days !== 0 ){
             console.log(i + " - rest")   
@@ -48,15 +45,12 @@ if(0 < lastDay && lastDay <= 31 ){
 }
 
 
-
-
 /** Problem 04 - (Delete / Store) */
 var fileName= "pdfData.jpg";
 //write your code here
 
 var fileNameArray = fileName.split(".")
-fileNameArray = fileNameArray[fileNameArray.length - 1]   // when i don't know how many index of array then (fileNameArray.length - 1) it's called this array last index.
-//fileNameArray = fileNameArray[1] // When i know filNameArray has 2 index then directly set array index.
+fileNameArray = fileNameArray[fileNameArray.length - 1]   
 
 if(fileName[0] === "#" || fileNameArray === "pdf" || fileNameArray === "docx" ){
     console.log("Store")
@@ -66,25 +60,18 @@ else{
 }
 
 
-
-
 /** Problem 05 - ( PH Email Generator )  */
 var student= { name: "jhanku" , roll: 1014 ,department: "cse" };
 //write your code here
-
-// var generatedEmail = student.name + student.roll + "." + student.department + "@ph.ac.bd"
 var generatedEmail =`${student.name}${student.roll}.${student.department}@ph.ac.bd`
 console.log(generatedEmail)
-
-
 
 /** Problem 06 :  (Current Salary )  */
 var experience = 30;
 var startingSalary = 45000;
 //write your code here
 
-
-if(0 < experience && startingSalary <= 1e6 ){ // Experience and Starting Salary validation
+if(0 < experience && startingSalary <= 1e6 ){
 
     for( var i = 1; i <= experience; i++ ){
         startingSalary = startingSalary + (startingSalary / 100 * 5)
